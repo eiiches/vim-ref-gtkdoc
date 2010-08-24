@@ -1,0 +1,44 @@
+*ref-gtkdoc.txt*	gtkdoc 用の ref ソース。
+
+Version: 0.0.1
+Author : eiiches <sato.eiichi+github@gmail.com>
+       : thinca <thinca+vim@gmail.com>
+License: クリエイティブ・コモンズの表示 2.1 日本ライセンス
+         <http://creativecommons.org/licenses/by/2.1/jp/>
+
+==============================================================================
+目次						*ref-gtkdoc-contents*
+
+概要				|ref-gtkdoc-introduction|
+カスタマイズ			|ref-gtkdoc-customizing|
+更新履歴			|ref-gtkdoc-changelog|
+
+
+==============================================================================
+概要						*ref-gtkdoc-introduction*
+
+*ref-gtkdoc* は gtkdoc を利用するための |ref| ソースです。
+
+要件:
+- |ref| 0.3.2 以降
+
+
+
+==============================================================================
+カスタマイズ					*ref-gtkdoc-customizing*
+
+g:ref_gtkdoc_cmd				*g:ref_gtkdoc_cmd*
+			gtkdocを引くためのコマンドです。
+			http://github.com/eiiches/devhelpforcui のshowなどを指
+			定してください。
+
+
+==============================================================================
+更新履歴					*ref-gtkdoc-changelog*
+
+0.0.1	2010-08-24
+	- 初版。
+
+
+==============================================================================
+vim:tw=78:fo=tcq2mM:ts=8:ft=help:norl
