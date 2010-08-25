@@ -36,11 +36,11 @@ function! s:syntax(query)  " {{{2
 
   syntax clear
   let str = escape(substitute(a:query, '\s\+', '\\_s\\+', 'g'), '"')
-  if str =~# '^[[:print:][:space:]]\+$'
+  if str =~# '^[[:alnum:]_[:space:]]\+$'
     let str = '\<' . str . '\>'
+		execute 'syntax match refGtkDocKeyword "\c'.str.'"'
+		highlight default link refGtkDocKeyword Special
   endif
-  execute 'syntax match refGtkDocKeyword "\c'.str.'"'
-  highlight default link refGtkDocKeyword Special
 endfunction
 
 
