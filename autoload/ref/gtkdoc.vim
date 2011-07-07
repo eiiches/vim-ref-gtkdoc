@@ -8,6 +8,10 @@
 let s:save_cpo = &cpo
 set cpo&vim
 
+if !exists('g:ref_gtkdoc_cmd')
+	let g:ref_gtkdoc_cmd = globpath(&rtp, 'gtkdoc/gtkdoc', 1)
+endif
+
 let s:source = {'name': 'gtkdoc'}  " {{{1
 
 function! s:source.available()  " {{{2
@@ -27,7 +31,6 @@ function! s:source.normalize(query)  " {{{2
   return substitute(substitute(a:query, '\_s\+', ' ', 'g'), '^ \| $', '', 'g')
 endfunction
 
-
 " misc. {{{1
 function! s:syntax(query)  " {{{2
   if exists('b:current_syntax') && b:current_syntax == 'ref-gtkdoc'
@@ -42,7 +45,6 @@ function! s:syntax(query)  " {{{2
 		highlight default link refGtkDocKeyword Special
   endif
 endfunction
-
 
 function! ref#gtkdoc#define()  " {{{2
   return s:source
