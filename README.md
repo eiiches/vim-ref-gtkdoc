@@ -2,6 +2,10 @@
 
 See gtk documentation on vim
 
+## Screencast
+
+![screencast of vim-ref-gtkdoc](etc/GtkHelp_vim.gif)
+
 ## Install with Vundle:
 
     Plugin 'thinca/vim-ref'
