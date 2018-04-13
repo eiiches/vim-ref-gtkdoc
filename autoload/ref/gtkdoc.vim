@@ -50,7 +50,7 @@ function! ref#gtkdoc#define()  " {{{2
   return s:source
 endfunction
 
-function! ref#gtkdoc#vsel()  " {{{2
+function! ref#gtkdoc#vsel(type)  " {{{2
   if "vV" =~ mode()
     let [lnum1, col1] = getpos("'<")[1:2]
     let [lnum2, col2] = getpos("'>")[1:2]
@@ -62,7 +62,7 @@ function! ref#gtkdoc#vsel()  " {{{2
     let pattern = expand("<cword>")
   endif
 
-  call ref#ref('gtkdoc ' . pattern)
+  call ref#ref(a:type . ' ' . pattern)
 
 endfunction
 
